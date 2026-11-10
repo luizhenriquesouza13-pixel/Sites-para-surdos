@@ -1,0 +1,447 @@
+/* Variables para Design Global */
+:root {
+    --primary: #0077b6;
+    --primary-dark: #023e8a;
+    --accent: #00b4d8;
+    --bg-light: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-dark: #1d2d44;
+    --text-muted: #4a5568;
+    --border: #e2e8f0;
+    --success: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav a:hover, .nav a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    outline: 2px solid var(--accent);
+}
+
+.btn-nav {
+    background-color: var(--accent) !important;
+    color: var(--primary-dark) !important;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: #fff;
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botões Globais */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* Seções Principais */
+.section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-dark {
+    background-color: #eef4f8;
+    max-width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 3rem;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-dark);
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* Media Grid / Vídeos */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+}
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.badge {
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.video-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Formulário de Contato */
+.contact-box {
+    background: var(--bg-card);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+}
+
+.contact-box h2 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.contact-box p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* Alerta Visual Animado */
+.alerta-visual {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--success);
+    color: #fff;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: flashAlert 0.5s ease-in-out 2;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes flashAlert {
+    0% { transform: scale(0.9); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-dark);
+    color: #fff;
+}
+
+/* Container do Atendimento Visual */
+.atendimento-container {
+    background: var(--bg-card);
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+/* Abas */
+.atendimento-tabs {
+    display: flex;
+    background-color: var(--primary-dark);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.2s;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+}
+
+/* Visibilidade das Abas */
+.tab-content {
+    display: none;
+    padding: 2rem;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Componente de Chat */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--success);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 0.5rem;
+}
+
+.mensagem {
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.mensagem-sistema {
+    background-color: #e2e8f0;
+    color: var(--text-dark);
+    align-self: flex-start;
+}
+
+.mensagem-usuario {
+    background-color: var(--primary);
+    color: #fff;
+    align-self: flex-end;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.chat-input-area input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* Agendamento em Vídeo */
+.video-agendamento h3 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.video-agendamento p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+

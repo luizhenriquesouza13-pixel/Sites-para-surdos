@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InclusãoAtiva | Portal Acessível em LIBRAS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones visuais FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <!-- Ícone vetorial da logo (100% funcional sem quebrar imagem) -->
+            <i class=""></i>
+            <span>Inclusão<strong>Ativa</strong></span>
+        </div>
+        <nav class="nav">
+            <a href="#inicio"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="#recursos"><i class="fa-solid fa-layer-group"></i> Recursos</a>
+            <a href="#videos"><i class="fa-solid fa-video"></i> Vídeos</a>
+            <a href="#atendimento" class="btn-nav"><i class="fa-solid fa-comments"></i> Atendimento em LIBRAS</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Principal -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="tag"><i class="fa-solid fa-eye"></i> 100% Foco em Acessibilidade Visual</span>
+                <h1>Informação acessível para a comunidade surda</h1>
+                <p>Plataforma desenhada para proporcionar comunicação visual fluida, tradução em LIBRAS e conteúdos em vídeo com legendas completas.</p>
+                <div class="hero-actions">
+                    <a href="#atendimento" class="btn btn-primary"><i class="fa-solid fa-video"></i> Iniciar Atendimento Visual</a>
+                    <a href="#recursos" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> Explorar Recursos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Recursos / Grade de Conteúdo -->
+        <section id="recursos" class="section">
+            <h2 class="section-title">Como Garantimos Acessibilidade</h2>
+            <div class="cards-grid">
+                
+                <article class="card">
+                    <div class="card-icon"><i class="fa-solid fa-hands-listening"></i></div>
+                    <h3>Tradução para LIBRAS</h3>
+                    <p>Integrado com o VLibras para tradução automática em tempo real e suporte a vídeos gravados por intérpretes humanos.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon"><i class="fa-solid fa-closed-captioning"></i></div>
+                    <h3>Legendas Descritivas (CC)</h3>
+                    <p>Todos os conteúdos multimídia contam com legendas detalhadas que descrevem falas, ruídos de fundo e ambiente sonoro.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Alertas Visuais</h3>
+                    <p>Substituição de notificações sonoras por sinalizações luminosas, animações e feedback tátil/visual instantâneo.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Chat & Videochamada</h3>
+                    <p>Canais diretos de atendimento em texto ou videochamada para comunicação em Língua de Sinais sem intermediários de voz.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Seção de Vídeos / Central de Aprendizado -->
+        <section id="videos" class="section section-dark">
+            <h2 class="section-title">Vídeos em Destaque</h2>
+            <div class="media-grid">
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls poster="https://via.placeholder.com/600x340/003459/FFFFFF?text=Assistir+em+LIBRAS">
+                            <source src="video-demo.mp4" type="video/mp4">
+                            <track kind="captions" src="legendas.vtt" srclang="pt-br" label="Português" default>
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="badge">LIBRAS + CC</span>
+                        <h3>Apresentação dos Direitos da Pessoa Surda</h3>
+                        <p>Resumo visual com intérprete dos principais direitos à acessibilidade em serviços públicos e privados.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls poster="https://via.placeholder.com/600x340/003459/FFFFFF?text=Tutorial+Navegacao">
+                            <source src="tutorial.mp4" type="video/mp4">
+                            <track kind="captions" src="legendas.vtt" srclang="pt-br" label="Português">
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <span class="badge">Tutorial</span>
+                        <h3>Como Usar a Ferramenta de Tradução</h3>
+                        <p>Aprenda a ativar e utilizar o avatar de LIBRAS para navegar por todo o conteúdo textual do site.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção de Atendimento Visual -->
+        <section id="atendimento" class="section">
+            <h2 class="section-title">Central de Atendimento Visual</h2>
+            
+            <div class="atendimento-container">
+                <!-- Abas de Navegação -->
+                <div class="atendimento-tabs">
+                    <button class="tab-btn active" data-tab="chat">
+                        <i class="fa-solid fa-comments"></i> Chat em Texto
+                    </button>
+                    <button class="tab-btn" data-tab="video">
+                        <i class="fa-solid fa-video"></i> Chamada em LIBRAS
+                    </button>
+                </div>
+
+                <!-- Conteúdo 1: Chat em Texto -->
+                <div id="tab-chat" class="tab-content active">
+                    <div class="chat-box">
+                        <div class="chat-header">
+                            <span class="status-dot"></span>
+                            <span>Atendente LIBRAS/Texto — <strong>Online</strong></span>
+                        </div>
+                        <div id="chatMessages" class="chat-messages">
+                            <div class="mensagem mensagem-sistema">
+                                Bem-vindo ao atendimento visual! Como podemos ajudar você hoje?
+                            </div>
+                        </div>
+                        <form id="chatForm" class="chat-input-area">
+                            <input type="text" id="chatInput" placeholder="Digite sua mensagem..." required autocomplete="off">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Conteúdo 2: Agendamento por Vídeo -->
+                <div id="tab-video" class="tab-content">
+                    <div class="video-agendamento">
+                        <h3><i class="fa-solid fa-calendar-check"></i> Agendar Atendimento em LIBRAS</h3>
+                        <p>Conecte-se diretamente com um intérprete humano por videochamada.</p>
+
+                        <form id="formAgendamento" class="form">
+                            <div class="form-group">
+                                <label for="nomeAgendamento">Nome Completo:</label>
+                                <input type="text" id="nomeAgendamento" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dataAgendamento">Data Preferida:</label>
+                                <input type="date" id="dataAgendamento" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horaAgendamento">Horário:</label>
+                                <select id="horaAgendamento" required>
+                                    <option value="">Selecione um horário</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="16:00">16:00</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-video"></i> Confirmar Agendamento
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerta Visual Dinâmico -->
+        <div id="painelAlerta" class="alerta-visual hidden" role="alert"></div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2026 InclusãoAtiva. Feito com foco em Acessibilidade e Inclusão Visual.</p>
+    </footer>
+
+    <!-- WIDGET VLIBRAS (Governo Federal) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <!-- Script Oficial do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
